@@ -1,0 +1,29 @@
+/* nowBorrow.wxss */
+
+.books{
+  font-size: small;
+  border:1px solid #dadada;
+  margin-top:20px;
+  width: 100%;
+
+}
+.top,.book{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.title,.borrowdate,.returndate{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 33%
+}
+.nobook{
+  width: 100%;
+  display: flex;
+  padding-top: 60rpx;
+  justify-content: center;
+}

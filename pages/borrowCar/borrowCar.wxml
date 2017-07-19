@@ -1,0 +1,28 @@
+<!--borrowCar.wxml-->
+
+  <view wx:if="{{booksincar!=null&&loading}}" class="car">
+
+    <view class="top">
+      <view class="title">书名</view>
+      <view class="author">作者</view>
+      <view class="action">操作</view>
+    </view>
+
+    <view class="book" wx:for="{{booksincar}}" wx:key="item">
+      <text class="title">{{item.title}}</text>
+      <text class="author">{{item.author[0]+"等"}}</text>
+      <view class="action">
+        <button size="mini" bindtap="deletebook" data-delbook="{{item}}">移除</button>
+      </view>
+    </view>
+
+    <button class="subm" bindtap="submitcar">borrow</button>
+  </view>
+
+  <view wx:if="{{(loading&&booksincar==null)}}" class="nobook">
+    <button wx:if="{{!loadingcode}}" bindtap="formSubmit" class="btn">显示二维码</button>
+    
+   <view wx:else class="img-box">
+        <canvas style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+   </view>
+  </view>

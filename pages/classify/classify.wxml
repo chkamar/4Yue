@@ -1,0 +1,25 @@
+<!--classify.wxml-->
+<view wx:wx:if="{{loading==true}}" class="classify">
+
+  <!--  展示所有标签-->
+  <view class="show-tags">
+    <view class="show-tag" wx:for="{{tags}}" wx:key="*item">
+      <navigator url="../category/category?key={{'tag'}}&tag={{item._id}}" class="tag-text">{{item._id}}</navigator>
+    </view>
+  </view>
+
+  <!--  按标签展示-->
+  <view class="tags" wx:for="{{tags}}" wx:key="*item">
+
+    <navigator url="../category/category?key={{'tag'}}&tag={{item._id}}" class="tag-text">{{item._id}}</navigator>
+
+    <view class="tag-books">
+      <view class="book" wx:for="{{books[index]}}" wx:for-item="book" wx:key="book">
+        <image src="{{book.images.large}}" class="image"  bindtap="skip" data-url="../bookInfo/bookInfo?isbn={{book.isbn}}"></image>
+        <text class="title"  bindtap="skip" data-url="../bookInfo/bookInfo?isbn={{book.isbn}}">{{book.title}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>

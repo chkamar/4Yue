@@ -1,0 +1,67 @@
+/* bookInfo.wxss */
+
+.book{
+  
+}
+.info{
+  padding-top: 20px;
+  padding-bottom: 40px
+}
+.property{
+  display: block;
+  float: left;
+  padding-bottom: 10rpx;
+  width: 99%;
+}
+.property-key{
+  float: left;
+  font-size: small;
+  text-align: right;
+  width:25%;
+  font-weight: bold;
+
+}
+.property-value{
+  font-size: small;
+  text-align: left;
+  float: right;
+  width: 74%;
+  
+}
+.text-info{
+   padding-left: 20rpx;
+  
+}
+.text-status{
+   padding-left: 20rpx;
+}
+.bookStatus{
+  font-size: small;
+  border:1px solid #dadada;
+  margin-top:20px;
+  width: 100%;
+
+}
+.top,.records{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.tip,.record{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 41%
+}
+.action{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 18%
+}

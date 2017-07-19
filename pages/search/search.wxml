@@ -1,0 +1,30 @@
+<!--searchBook.wxml-->
+<view class="search">
+  <input class="search-input" bindinput="inputValue" bindfocus="getfocus" bindblur="lostfocus"
+   bindconfirm="searchBook" confirm-type="search" confirm-hold="false"/>
+  <image class="scan" bindtap="scanning" src="../../images/scan.png"></image>
+</view>
+
+<view class="history" wx:if="{{focus}}">
+    <view class="item" wx:for="{{searchhst}}" wx:key="item">
+        <text bindtap="gohist" data-title="{{item}}">{{item}}</text>
+    </view>
+</view>
+
+<view  wx:if="{{focus}}" class="delallhist" bindtap="delallhist">清空所有搜索历史</view>
+
+<text class="like-text" wx:if="{{loading}}">
+  猜你喜欢
+</text>
+
+<view class="like"  wx:if="{{loading}}">
+  <view class="like-books" wx:for="{{likebooks}}" wx:key="item">
+   <image class="like-book-image" src="{{item.images.large}}" 
+   bindtap="skip" data-url="../bookInfo/bookInfo?isbn={{item.isbn}}"></image>
+   <text class="like-book-name" bindtap="skip" data-url="../bookInfo/bookInfo?isbn={{item.isbn}}">{{item.title}}</text>
+  </view>
+</view>
+
+  
+
+  

@@ -1,0 +1,30 @@
+/* pages/personal/personal.wxss */
+.container{
+  padding: 20rpx
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.list{
+  display: list-item;
+  column-count: 2;
+  width:100%;
+  padding-top: 40rpx;
+  
+}
+.li{
+   text-align: center;
+   padding-top: 20rpx;
+   padding-bottom: 20rpx;
+}

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/classify/classify",
+    "pages/personal/personal",
+    "pages/borrowCar/borrowCar",
+    "pages/category/category",
+    "pages/bookInfo/bookInfo",
+    "pages/nowBorrow/nowBorrow",
+    "pages/appointment/appointment",
+    "pages/history/history"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "4Yue",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/search1.png",
+        "iconPath": "images/search.png",
+        "pagePath": "pages/search/search",
+        "text": "我要找书"
+      },
+      {
+        "selectedIconPath": "images/classify1.png",
+        "iconPath": "images/classify.png",
+        "pagePath": "pages/classify/classify",
+        "text": "分类浏览"
+      },
+      {
+        "selectedIconPath": "images/user1.png",
+        "iconPath": "images/user.png",
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+/* searchBook.wxss */
+.search{
+  display: flex;
+  justify-content: center;
+  
+  align-items: center;
+  padding-top: 40rpx;
+  text-align: center
+}
+.search-input{
+
+  border-style:solid;
+  border-color:gray;
+  width: 70%;
+  height: 1.6rem
+}
+.scan{
+  margin-left: 40rpx;
+  width:3rem;
+  height:2.5rem;
+}
+
+.history{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.item{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding: 15rpx;
+}
+.delallhist{
+  width:90%;
+  text-align: center
+}
+
+.like-text{
+  display: flex;
+  padding-left: 20rpx;
+  color: coral
+}
+.like{
+  column-count: 2;
+  flex-direction: row
+  
+}
+.like-books{
+  padding: 20rpx;
+  padding-bottom: 40rpx;
+  text-align: center;
+  align-items: center;
+  height:400rpx;
+  width:320rpx;
+  
+}
+.like-book-image{
+  width:90%;
+  margin: 15rpx auto;
+  height: 300rpx
+} 
+.like-book-name{
+  color: slategray;
+  word-wrap: break-word;
+  
+}

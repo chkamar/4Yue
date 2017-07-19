@@ -1,0 +1,50 @@
+/* borrowCar.wxss */
+
+.car{
+  font-size: small;
+  border:1px solid #dadada;
+  margin-top:20px;
+  width: 100%;
+
+}
+.top,.book{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.title,.author{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 41%
+}
+.action{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 18%
+}
+.subm{
+  margin: 50rpx;
+  float: right;
+  
+}
+.nobook{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60rpx;
+  justify-content: center;
+}
+.btn{
+  
+  align-items: center
+}
+.img-box{padding: 32rpx;background-color: #fff;border-bottom: 1rpx solid #e5e5e5;position: relative}
+.img-box image{width: 686rpx;height: 686rpx;background-color: #f9f9f9}

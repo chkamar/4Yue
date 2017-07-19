@@ -1,0 +1,20 @@
+<!--category.wxml-->
+
+
+  <view wx:if="{{loading}}" class="books">
+  
+    <view wx:if="{{books.length==0}}" class="no-book">
+      没有相关书籍哦!
+    </view>
+    
+    <view class="books">
+      <view wx:if="{{books.length>0}}" class="book" wx:for="{{books}}" wx:key="*item">
+        <image src="{{item.images.large}}" class="image"  bindtap="skip" data-url="../bookInfo/bookInfo?isbn={{item.isbn}}"></image>
+        <text class="title"  bindtap="skip" data-url="../bookInfo/bookInfo?isbn={{item.isbn}}">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+
+
+
+

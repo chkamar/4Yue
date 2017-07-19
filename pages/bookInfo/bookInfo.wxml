@@ -1,0 +1,53 @@
+<!--bookInfo.wxml-->
+<view class="book">
+
+  <text class="text-info">{{"书籍信息"}}</text>
+
+  <view wx:if="{{loading}}" class="info">
+
+    <view class="property">
+      <view class="property-key">书名</view> <view class="property-value">{{info.title}}</view>
+    </view>
+    <view class="property">
+      <view class="property-key">作者</view> <view class="property-value">{{authors}}</view>
+    </view>
+    <view class="property">
+      <view class="property-key">书籍数量</view> <view class="property-value">{{info.numberofbook}}</view>
+    </view>
+    <view class="property">
+      <view class="property-key">出版社</view> <view class="property-value">{{info.publisher}}</view>
+    </view>
+    <view class="property">
+      <view class="property-key">内容概要</view> <view class="property-value">{{summary}}</view>
+    </view>
+
+  </view>
+
+
+  <text class="text-status">{{"馆藏信息"}}</text>
+
+  <view wx:if="{{loading}}" class="bookStatus" >
+
+    <view class="top">
+      <view class="tip">图书馆</view>
+      <view class="tip">书籍状态</view>
+      <view class="action">操作</view>
+    </view>
+
+    <view class="records" wx:for="{{status}}" wx:for-item="record" wx:key="*item">
+      <view class="record" >{{record['lib_local']}}</view>
+
+      <view class="record" wx:if="{{record['bookstatus']==200}}">可借</view>
+      <view class="record" wx:else>暂不可借</view>
+
+      <view class="action">
+        <button size="mini" wx:if="{{record['bookstatus']==200}}" bindtap="scanning">扫码</button>
+        <button size="mini" wx:else bindtap="appoint" 
+        data-library="{{record['lib_local']}}">预约</button>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

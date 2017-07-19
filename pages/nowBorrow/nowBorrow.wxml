@@ -1,0 +1,21 @@
+<!--nowBorrow.wxml-->
+  <view wx:if="{{!loading}}" class="nobook">
+   <text>当前暂无借阅!</text>
+  </view>
+ <view wx:else class="books">
+
+    <view class="top">
+      <view class="title">书名</view>
+      <view class="borrowdate">借书日期</view>
+      <view class="returndate">还书日期</view>
+    </view>
+
+    <view class="book" wx:for="{{allBooks}}" wx:key="item">
+      <text class="title">{{item.title}}</text>
+      <text class="borrowdate">{{item.borrowdate}}</text>
+      <view class="returndate">{{item.returndate}}</view>
+    </view>
+
+  </view>
+
+

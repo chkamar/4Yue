@@ -1,0 +1,29 @@
+<!--appointment.wxml-->
+
+  <view wx:if="{{!loading}}" class="nobook">
+   <text>暂无预约书籍!</text>
+  </view>
+
+  <view wx:else class="books" >
+
+    <view class="top">
+      <view class="title">书名</view>
+      <view class="library">图书馆</view>
+      <view class="status">状态</view>
+      <view class="action">操作</view>
+    </view>
+
+    <view class="records" wx:for="{{appointbooks}}" wx:for-item="record" wx:key="*item">
+      <view class="title" >{{record['title']}}</view>
+
+      <view class="library" >{{record['library']}}</view>
+
+      <view class="status">{{record['status']}}</view>
+
+      <view class="action">
+        <button size="mini" class="btn" bindtap="cancleappoint" 
+        data-delbook="record">取消</button>
+      </view>
+    </view>
+
+  </view>
